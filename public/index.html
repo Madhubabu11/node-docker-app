@@ -1,49 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Node Docker App</title>
+    <title>Alpha Biryani House</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
-            background: linear-gradient(to right, #4facfe, #00f2fe);
+            margin: 0;
             font-family: Arial, sans-serif;
-            text-align: center;
+            background: linear-gradient(to right, #8B0000, #FF4500);
             color: white;
-            margin-top: 100px;
+            text-align: center;
         }
 
-        .card {
-            background: rgba(0, 0, 0, 0.4);
+        header {
+            padding: 30px;
+            background: rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            font-size: 45px;
+            margin: 0;
+        }
+
+        .tagline {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .menu {
             padding: 40px;
-            border-radius: 10px;
-            display: inline-block;
         }
 
-        button {
-            padding: 10px 20px;
-            border: none;
-            background: white;
+        .menu-item {
+            background: rgba(0,0,0,0.4);
+            margin: 15px auto;
+            padding: 20px;
+            width: 60%;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+        .order-btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: yellow;
             color: black;
-            cursor: pointer;
+            border: none;
+            font-weight: bold;
             border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0,0,0,0.6);
         }
     </style>
 </head>
+
 <body>
-    <div class="card">
-        <h1>🚀 Node.js Docker App</h1>
-        <p>This app is running inside Docker!</p>
-        <button onclick="callApi()">Call API</button>
-        <p id="result"></p>
+
+<header>
+    <h1>🍛 Alpha Biryani House</h1>
+    <p class="tagline">Authentic Taste of Hyderabad</p>
+</header>
+
+<section class="menu">
+    <h2>Our Special Menu</h2>
+
+    <div class="menu-item">
+        🐔 Chicken Dum Biryani – ₹199
     </div>
 
-    <script>
-        function callApi() {
-            fetch('/api')
-                .then(res => res.json())
-                .then(data => {
-                    document.getElementById('result').innerText = data.message;
-                });
-        }
-    </script>
+    <div class="menu-item">
+        🐐 Mutton Biryani – ₹299
+    </div>
+
+    <div class="menu-item">
+        🥚 Egg Biryani – ₹149
+    </div>
+
+    <div class="menu-item">
+        🥦 Veg Biryani – ₹129
+    </div>
+
+    <button class="order-btn" onclick="orderNow()">
+        Order Now
+    </button>
+</section>
+
+<footer>
+    📍 Location: Hyderabad, India <br>
+    📞 Contact: +91 9876543210
+</footer>
+
+<script>
+    function orderNow() {
+        alert("Thank you for choosing Alpha Biryani House! Your order will be served hot 🔥");
+    }
+</script>
+
 </body>
 </html>
