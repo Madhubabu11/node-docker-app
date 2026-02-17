@@ -4,60 +4,102 @@
     <title>Alpha Biryani House</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #8B0000, #FF4500);
-            color: white;
-            text-align: center;
-        }
+   <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        header {
-            padding: 30px;
-            background: rgba(0,0,0,0.5);
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #7b0000, #ff6a00);
+        color: white;
+        text-align: center;
+        min-height: 100vh;
+    }
+
+    header {
+        padding: 40px 20px;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+    }
+
+    h1 {
+        font-size: 50px;
+        letter-spacing: 2px;
+    }
+
+    .tagline {
+        font-size: 18px;
+        margin-top: 10px;
+        color: #ffd700;
+    }
+
+    .menu {
+        padding: 50px 20px;
+    }
+
+    .menu h2 {
+        margin-bottom: 30px;
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .menu-item {
+        background: rgba(255, 255, 255, 0.1);
+        margin: 15px auto;
+        padding: 20px;
+        width: 70%;
+        border-radius: 15px;
+        font-size: 20px;
+        transition: transform 0.3s ease, background 0.3s ease;
+        cursor: pointer;
+    }
+
+    .menu-item:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .order-btn {
+        margin-top: 30px;
+        padding: 14px 35px;
+        background: gold;
+        color: black;
+        border: none;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .order-btn:hover {
+        background: white;
+        transform: scale(1.1);
+    }
+
+    footer {
+        margin-top: 50px;
+        padding: 25px;
+        background: rgba(0, 0, 0, 0.7);
+        font-size: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .menu-item {
+            width: 90%;
         }
 
         h1 {
-            font-size: 45px;
-            margin: 0;
+            font-size: 35px;
         }
+    }
+</style>
 
-        .tagline {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-
-        .menu {
-            padding: 40px;
-        }
-
-        .menu-item {
-            background: rgba(0,0,0,0.4);
-            margin: 15px auto;
-            padding: 20px;
-            width: 60%;
-            border-radius: 10px;
-            font-size: 18px;
-        }
-
-        .order-btn {
-            margin-top: 20px;
-            padding: 12px 25px;
-            background: yellow;
-            color: black;
-            border: none;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: rgba(0,0,0,0.6);
-        }
-    </style>
 </head>
 
 <body>
